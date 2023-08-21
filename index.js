@@ -151,7 +151,7 @@ function Truck(
   //  Записуєм в this.color значення аргументу color, в this.engineType значення аргументу engineType і так далі зі всіми аргументами
 }
 
-Truck.prototype.specific = function (num) {
+Truck.prototype.tow = function (num) {
   if (num > this.towingCapacity) {
     console.log(`Навантаження занадто важке для буксирування`);
   } else {
@@ -203,7 +203,7 @@ Car.prototype.drive = function (kilometers) {
   );
 };
 
-let drive = newCar.drive.bind(car);
+let drive = car.drive.bind(car);
 
 drive(100);
 // Викликаємо метод tow з вагою меншою за towingCapacity
